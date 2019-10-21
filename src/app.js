@@ -10,6 +10,8 @@ import mongoose from "mongoose";
 import passport from "passport";
 import bluebird from "bluebird";
 import { MONGODB_URI, SESSION_SECRET } from "./util/secrets";
+import apiRoutes from "./api-routes";
+
 
 const MongoStore = mongo(session);
 
@@ -62,5 +64,20 @@ app.use((req, res, next) => {
  */
 
 
+
+
+app.get("/", async (req, res, next) => {
+    const getApiVersion = (res) => {
+      fs.readFile(path.resolve(__dirname, "../package.json"), (err, data) => {
+        if (err) throw err;
+        const packageJson = JSON.parse(data.toString());
+        const version = packageJson.version;
+        res.status(200).send(`Api Version - ${version}`);
+      });
+    };
+    getApiVersion(res);
+  });
+  
+  app.use("/api", apiRoutes);
 
 export default app;
