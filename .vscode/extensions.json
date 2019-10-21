@@ -1,3 +1,16 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "ms-azuretools.vscode-cosmosdb"]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "googlecloudtools.cloudcode",
+    "ms-azuretools.vscode-docker",
+    "waderyan.gitblame",
+    "eamodio.gitlens",
+    "alexdima.copy-relative-path",
+    "coenraads.bracket-pair-colorizer",
+    "cmstead.jsrefactor",
+    "orta.vscode-jest",
+    "2gua.rainbow-brackets",
+    "jasonnutter.search-node-modules",
+    "redhat.vscode-yaml"
+  ]
 }

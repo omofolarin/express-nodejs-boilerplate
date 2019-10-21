@@ -1,6 +1,6 @@
-import { Logger, LoggerOptions, transports } from "winston";
+import { Logger, transports } from "winston";
 
-const options: LoggerOptions = {
+const options = {
     transports: [
         new transports.Console({
             level: process.env.NODE_ENV === "production" ? "error" : "debug"
