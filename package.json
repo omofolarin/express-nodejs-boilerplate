@@ -21,7 +21,7 @@
     "serve-debug": "nodemon --inspect dist/server.js"
   },
   "dependencies": {
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "babel-node": "0.0.1-security",
     "bcrypt-nodejs": "^0.0.3",
     "bluebird": "^3.5.5",
